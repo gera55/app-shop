@@ -34,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url('register') }}">App Shop</a>
+                <a class="navbar-brand" href="{{ url('/') }}">App Shop</a>
             </div>
 
             <div class="collapse navbar-collapse" id="navigation-example">
@@ -54,6 +54,9 @@
                                     <a href="{{ url('home') }}">Dashboard</a>
                                 </li>
                                 @if (auth()->user()->admin)
+                                <li>
+                                    <a href="{{ url('/admin/categories') }}">Gestionar categorías</a>
+                                </li>
                                 <li>
                                     <a href="{{ url('/admin/products') }}">Gestionar productos</a>
                                 </li>
